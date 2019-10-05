@@ -28,9 +28,10 @@
         }
 
         .form-groupbox{
-            padding-top: 10px;
+            padding-top: 5px;
+            background: #D3D3D3;
             border: 0px solid #000;
-            padding: 20px 30px; 
+            padding: 10px 20px; 
             -webkit-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
             -moz-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
             box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
@@ -70,14 +71,14 @@
     
     </style>
 </head>
-<body class="bg-light" style="overflow-x:hidden">
+<body style="overflow-x:hidden;background: #787A7D">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 60px">
         <a href="index.html" class="icon-link">
             <i class="fa fa-home"></i>
         </a>
         <p class="navbar-brand mb-0 h1 navbar-center mx-auto">DIGITAL SIGNATURE</p>
     </nav>    
-    <br><br>
+    <br>
     <div class="container">
         <form name="myform" class="form-groupbox">
             <div class="row">
@@ -88,7 +89,6 @@
                     <input autocomplete="off" type="text" class="form-control" placeholder="Enter Name(s)">
                 </div>   
             </div>
-            <hr>
             <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label for="inputname"><span>Addressee Mail Id(s):<span></label>
@@ -97,7 +97,6 @@
                     <input autocomplete="off" type="text" class="form-control" placeholder="Enter Mail Id(s)">
                 </div>   
             </div>
-            <hr>
             <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label for="inputname"><span>OTP:<span></label>
@@ -106,7 +105,6 @@
                     <input autocomplete="off" type="text" class="form-control" placeholder="Enter OTP">
                 </div>   
             </div>
-            <hr>
             <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label for="inputname"><span>Subject Line:<span></label>
@@ -115,7 +113,6 @@
                     <input autocomplete="off" type="text" class="form-control" placeholder="Enter Subject">
                 </div>   
             </div>
-            <hr>
             <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label for="inputname"><span>Message:<span></label>
@@ -124,6 +121,7 @@
                     <textarea rows="4" cols="50" placeholder="Enter Message"></textarea>           
                 </div> 
             </div>
+            <hr>
             <!--<div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 ">
                     <div class="custom-file">
@@ -132,7 +130,6 @@
                     </div>
                 </div>
             </div>-->
-            <hr>
             <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label><span>Upload Signature:<span></label>
@@ -149,8 +146,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <button type="button" class="btn btn-block btn-success">
-                        Submit
+                    <button type="button" class="btn btn-block" style="background: #BD1D1D">
+                            <span style="color: #fff">Submit</span>
                     </button>                
                 </div>
             </div>
