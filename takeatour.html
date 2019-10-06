@@ -4,10 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Take A Tour</title>
-    <link rel="icon" type="image/gif/png" href="images/mahareralogo.png">
-</head>
-<body>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Big+Shoulders+Text|Roboto+Condensed|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>Take a Tour</title>
+    <link rel="icon" type="image/gif/png" href="images/mahareralogo.png">
+
+
+    <style>
+    
+    *{
+            padding: 0.2rem;
+        }
+
+        .container{
+            padding-top: 5px;
+            background: #D3D3D3;
+            border: 0px solid #000;
+            padding: 30px 80px; 
+            -webkit-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+            box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+        }
+
+        @media(max-width: 700px){
+            .container{
+                text-align: center;
+                width: 75%;
+                background: #D3D3D3;
+                border: 0px solid #000;
+                padding: 10px 20px; 
+                -webkit-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+                -moz-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+                box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+            }    
+        }
+
+        @media(min-width: 700px){
+            .container{
+                background: #D3D3D3;
+                border: 0px solid #000;
+                padding: 10px 20px; 
+                -webkit-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+                -moz-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+                box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+            }    
+        }
+
+        a{
+            color: #fff;
+        }
+        a:hover{
+            color: #fff;
+        }
+        
+        i{
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body style="overflow-x:hidden;background: #787A7D">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 60px">
+            <a href="index.html" class="icon-link">
+                <i class="fa fa-home"></i>
+            </a>
+            <p class="navbar-brand mb-0 h1 navbar-center mx-auto">Take a tour</p>
+        </nav> 
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-10 col-sm-6">
+                <blockquote><b>What is ML Lab?</b></blockquote>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-6 text-center">
+                <i href="#" class="fa fa-plus" data-toggle="collapse" data-target="#demo"></i>
+            </div>
+            <div id="demo" class="collapse">
+                <b style="marker: 5px">ML Labs are experiential stores which allows individuals to experience their under-construction home through technology.
+                     You can get an idea about how your home will look once completed. You can also try different customizations and your
+                      ideas shall be recorded through our state-of-the-art technology and then transformed into a tangible retail trophy:
+                    a custom magazine, that captures your experience and makes it easy for you to understand what your future home shall look 
+                    like.</b>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+                <div class="col-md-10 col-lg-10 col-sm-6">
+                    <blockquote><b>How does it work?</b></blockquote>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-6 text-center">
+                    <i class="fa fa-plus"></i>
+                </div>
+        </div>
+        <hr>
+        <div class="row">
+                <div class="col-md-10 col-lg-10 col-sm-6">
+                    <blockquote><b>Who can visit ML Lab?</b></blockquote>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-6 text-center">
+                    <i class="fa fa-plus"></i>
+                </div>
+        </div>
+        <hr>
+        <div class="row">
+                <div class="col-md-10 col-lg-10 col-sm-6">
+                    <blockquote><b>How much does it cost?</b></blockquote>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-6 text-center">
+                    <i class="fa fa-plus"></i>
+                </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <button class="btn" style="text-align: center;background: #BD1D1D;color: #fff;width: 100%;"><b>Book an appointment now</b></button>
+            </div>
+        </div>  
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("snackbar");
+            x.textContent = "Send for Preview"
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }    
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </body>
 </html>

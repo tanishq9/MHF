@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Big+Shoulders+Text|Roboto+Condensed|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css”  crossorigin=”anonymous”>
+    
+    <script type=”text/javascript” src=”js/bootstrap-filestyle.min.js”> </script>    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" type="image/gif/png" href="images/mahareralogo.png">
+
+    <title>E-Verify Seller Documents</title>
+
+    <style>
+        
+        *{
+            padding: 0.2rem;
+        }
+
+        .container{
+            padding-top: 5px;
+            background: #D3D3D3;
+            border: 0px solid #000;
+            padding: 30px 80px; 
+            -webkit-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+            box-shadow: 10px 9px 27px 8px rgba(0,0,0,0.75);
+        }
+
+        a{
+            color: #fff;
+        }
+        a:hover{
+            color: #fff;
+        }
+
+        textarea {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding:0.5rem;
+            width: 100%;
+        }
+            
+        #pic{
+            display: none;
+            }
+            
+        .newbtn{
+            cursor: pointer;
+        }
+
+        #blah{
+            max-width: 500px;
+            max-height: 500px;
+            margin-top:20px;
+        }   
+        
+        @media(max-width: 1000px) {
+            span{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+
+        @media(min-width: 1000px){
+            .vl {
+                margin-top: 30px;
+                border-left: 2px solid #787A7D;
+                height: 180px;
+            }
+            span{
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            hr{
+                border-top: 2px solid #BD1D1D;
+            }
+        }
+
+            #snackbar {
+                visibility: hidden;
+                min-width: 250px;
+                margin-left: -125px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 2px;
+                padding: 16px;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                bottom: 30px;
+                font-size: 17px;
+            }
+      
+        #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+        from {bottom: 0; opacity: 0;} 
+        to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+        from {bottom: 30px; opacity: 1;} 
+        to {bottom: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+        }
+
+    </style>
+</head>
+<body style="overflow-x:hidden;background: #787A7D">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 60px">
+        <a href="index.html" class="icon-link">
+            <i class="fa fa-home"></i>
+        </a>
+        <p class="navbar-brand mb-0 h1 navbar-center mx-auto">E-Verify Seller Documents</p>
+    </nav>    
+    <br>
+
+    <!--Add card here for asset id and defect details-->
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-lg-3 col-sm-0">
+                <!--Blank-->
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12">
+                    <center>
+                    <label class=newbtn>
+                        <img id="blah" src="images/sellerpic.png">
+                        <input id="pic" class='pis' onchange="readURL(this,'Document Selected');" type="file" >
+                    </label>
+                    <br>
+                    <span>Select the Document</span>
+                    </center>   
+                <br>
+            </div>
+            <div class="vl"></div>
+            <div class="col-md-3 col-lg-3 col-sm-12">
+                    <center>
+                    <label class=newbtn>
+                        <img id="blah" src="images/reviewpic.png">
+                        <input id="pic" class='pis' onclick="myFunction();" >
+            
+                    </label>
+                    <br>
+                    <span>Request Preview</span>
+                    </center>  
+            </div>
+             <div class="col-md-3 col-lg-3 col-sm-0">
+                <!--Blank-->
+            </div>        
+        </div>
+        <hr>
+        <div class="row text-center">
+             <div class="col-md-6 col-lg-3 col-sm-12">
+                <button class="btn" style="background: #BD1D1D;color: #fff">Sale Deed</button>
+             </div>
+             <div class="col-md-6 col-lg-3 col-sm-12">
+                <button class="btn" style="background: #787A7D;color: #fff">Mother Deed</button>
+            </div>
+            <div class="col-md-6 col-lg-3 col-sm-12">
+                <button class="btn" style="background: #BD1D1D;color: #fff">Building Approval Plan</button>
+            </div>
+            <div class="col-md-6 col-lg-3 col-sm-12">
+                <button class="btn" style="background: #787A7D;color: #fff">Commencement Certificate</button>
+            </div>
+        </div>
+        <div class="row text-center">
+                <div class="col-md-6 col-lg-3 col-sm-12">
+                    <button class="btn" style="background: #787A7D;color: #fff">Power Of Attorney</button>
+                </div>
+                <div class="col-md-6 col-lg-3 col-sm-12">
+                   <button class="btn" style="background: #BD1D1D;color: #fff">Khata Certificate</button>
+                </div>
+               <div class="col-md-6 col-lg-3 col-sm-12">
+                   <button class="btn" style="background: #787A7D;color: #fff">Conversion Certificate</button>
+               </div>
+               <div class="col-md-6 col-lg-3 col-sm-12">
+                    <button class="btn" style="background: #BD1D1D;color: #fff">Encumbrance Certificate</button>
+                </div>
+        </div>
+        <div class="row text-center">
+                <div class="col-md-6 col-lg-3 col-sm-12">
+                   <button class="btn" style="background: #BD1D1D;color: #fff">Tax Receipts</button>
+                </div>
+                <div class="col-md-6 col-lg-3 col-sm-12">
+                   <button class="btn" style="background: #787A7D;color: #fff">Completion Certificate</button>
+               </div>
+               <div class="col-md-6 col-lg-3 col-sm-12">
+                   <button class="btn" style="background: #BD1D1D;color: #fff">Occupancy Certificate</button>
+               </div>
+           </div>
+           <hr>   
+        </div>
+        <div id="snackbar">Send for Preview</div>
+    <script>
+            $('.newbtn').bind("click" , function () {
+                $('#pic').click();
+            });
+            
+            function readURL(input,text) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+        
+                        reader.onload = function (e) {
+                            $('#blah')
+                                .attr('src', e.target.result);
+                        };
+                    }
+                    var x = document.getElementById("snackbar");
+                    x.textContent = text;
+                    x.className = "show";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                }
+
+            function myFunction() {
+                var x = document.getElementById("snackbar");
+                x.textContent = "Send for Preview"
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }    
+        </script>
+        
+
+</body>
+</html>
